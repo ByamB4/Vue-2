@@ -16,9 +16,11 @@
           <input v-model="email" placeholder="Enter your mail" />
           <button v-on:click="addAccount()">Нэмэх</button>
         </div>
-        <div class="card" v-for="account in accounts" :key="account.name">
-          <span class="name">{{ account.name }}</span>
-          <span>{{account.email}}</span>
+        <div v-for="account in accounts">
+          <div class="card" :key="account.name">
+            <span class="name">{{ account.name }}</span>
+            <span>{{account.email}}</span>
+          </div>
         </div>
       </div>
     </div>
